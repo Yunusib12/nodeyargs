@@ -1,4 +1,6 @@
 const yargs = require('yargs');
+const chalk = require('chalk');
+const commands = require('./commands');
 
 let argv = yargs
     .command("create", "Create a new file in the system", {
@@ -13,6 +15,8 @@ let argv = yargs
     .argv;
 
 let command = yargs.argv._[0];
-let filename = argv.filename;
+let fileName = argv.filename;
 
-console.log(argv, command, filename);
+
+command === "create" ? commands.create(fileName) : console.log(chalk.red(`Please use "create" command to create the file or use node app -h for instruction.`))
+

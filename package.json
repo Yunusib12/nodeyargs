@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Yunusib12/nodeyargs#readme",
   "dependencies": {
+    "chalk": "^4.0.0",
     "yargs": "^15.3.1"
   }
 }
